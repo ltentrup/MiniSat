@@ -14,6 +14,10 @@ public class MiniSat: SATSolver {
         minisat_free(minisat)
     }
     
+    public var maxVar: Literal {
+        return minisat_max_var(minisat)
+    }
+    
     public func new() -> Literal {
         return minisat_new(minisat)
     }

@@ -8,6 +8,7 @@ class MiniSatTests: XCTestCase {
         let a = minisat.new()
         let b = minisat.new()
         XCTAssertNotEqual(a, b)
+        XCTAssertEqual(minisat.maxVar, 2)
         
         minisat.add(clause: [a, b])
         minisat.add(clause: [-b])
